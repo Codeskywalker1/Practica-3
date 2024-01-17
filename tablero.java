@@ -1,12 +1,9 @@
-
-
-public class tablero{
+public class tablero {
     
-    public Integer LimiteLargo = 17;
-    public Integer LimiteAncho = 15;
+    public Integer altura = 17;
+    public Integer ancho = 15;
 
-    //Nota: Inicializamos nIntegrantes con lo que se recibe del client
-    private int [][] mapa = new int [LimiteLargo][LimiteAncho];
+    private int[][] mapa = new int[altura][ancho]; //opcional final
     
     public tablero(){
         inicializarTablero();
@@ -16,21 +13,24 @@ public class tablero{
         return mapa;
     }
 
+    // Crear Tablero con 0
     public void inicializarTablero(){
+        
         System.out.println("Mapa iniciado");
-        //Nota: rellenamos de 0 para ver el mapa 
-        for(int i=0; i<LimiteLargo; i++){
-            for(int j =0; j<LimiteAncho; j++){
+        for(int i = 0; i < altura; i++){
+            for(int j = 0; j < ancho; j++){
                 mapa[i][j] = 0;
             }
         }   
     }
 
-    public Integer getLimiteAncho() {
-        return LimiteAncho;
+    //Getters
+
+    public Integer getAltura() {
+        return ancho;
     }
 
-    public Integer getLimiteLargo() {
-        return LimiteLargo;
+    public Integer getAncho() {
+        return altura;
     }
 }

@@ -33,6 +33,3 @@ public class jugador{
         this.pos = pos;
     }
 }
-
-
-
